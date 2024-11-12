@@ -1,0 +1,89 @@
+@charset "UTF-8"; 
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Anton+SC&family=Lilita+One&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rubik+Wet+Paint&family=Tiny5&display=swap');
+
+/* Resetando margens e preenchimentos de todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    background: url(https://media.discordapp.net/attachments/1217579940401119242/1306018740793643068/Sem_titulo.jpg?ex=6735243c&is=6733d2bc&hm=735b0e8feb30d5c2bc673bdab11884cfaff09c481be4cf1bff6e39e9e3a42410&=&format=webp&width=1092&height=614) no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    font-family: "Roboto Condensed", sans-serif;
+    padding-top: 80px; /* Espaço para a navegação fixa */
+}
+
+/* Estilos para a navegação */
+nav {
+    text-align: center;
+    background-color: rgb(255, 0, 212);
+    font-family: "Roboto Condensed", sans-serif;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+nav a {
+    color: white;
+    font-family: "Roboto Condensed", sans-serif;
+    margin-right: 30px;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; 
+    object-fit: contain; 
+    margin-top: 3px; 
+}
+
+/* Container para os artigos - Flexbox */
+main {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os artigos se movam para a linha seguinte em telas pequenas */
+    justify-content: center; /* Centraliza os artigos horizontalmente */
+    gap: 20px; /* Espaço entre os artigos */
+    margin-top: 50px; /* Espaço entre a logo e os artigos */
+}
+
+/* Estilo para os artigos */
+article {
+    background-color: rgb(255, 255, 255);
+    font-family: "Anton", sans-serif;
+    padding: 20px;
+    width: 250px; /* Largura fixa para os artigos */
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 8px; /* Bordas arredondadas */
+    border: 3px solid rgb(66, 0, 0); /* Borda vermelha */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    /* Para dispositivos móveis, os artigos devem se alinhar em uma coluna */
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    article {
+        width: 90%; /* Artigos ocupando 90% da largura da tela */
+    }
+
+    img {
+        max-width: 80%; /* Reduzindo a largura da logo em telas pequenas */
+    }
+
+    nav a {
+        margin-right: 15px; /* Ajuste do espaçamento entre os links da navegação */
+    }
+}
